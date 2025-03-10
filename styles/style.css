@@ -4,7 +4,7 @@
     font-family: 'Satoshi-Regular';
 }
 body{
-    background-color: rgba(250, 235, 215, 0.478);
+    background-color: rgb(249,249,249);
     font-family: 'Satoshi-Regular';
 }
 /* Header */
@@ -42,6 +42,8 @@ header img{
     background-color: white;
     border-radius: 20%;
 }
+
+/* Restaurant Info */
 .restaurant_info{
     position: absolute;
     top: 300px;
@@ -62,4 +64,25 @@ header img{
 .deliverCost img{
     height: 20px;
     filter: invert(1);
+}
+/* Categories Nav */
+.categories-nav{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    height: 70px;
+    gap: 300px;
+    box-shadow: 4px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.categories-nav a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 20px;
+}
+.categories-nav a:hover{
+    color: #E67E22;
+    text-decoration: underline;
+    text-underline-offset: 15px;
 }

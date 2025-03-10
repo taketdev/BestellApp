@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: 'Satoshi-Regular';
+}
+body{
+    background-color: rgba(250, 235, 215, 0.478);
+    font-family: 'Satoshi-Regular';
+}
+/* Header */
+header{
+    background-color: #ff8c00;
+    color: white;
+    text-align: center;
+    height: 100px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+header img{
+    width: 200px;
+    height: 200px;
+    padding: 25px;
+}
+
+/* Hero */
+.hero_img{
+    background-image: url(/assets/img/hero.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    filter: blur(3px);
+    position: relative;
+}
+.restaurant_logo img{
+    width: 150px;
+    position: absolute;
+    top: 370px;
+    left: 50%;
+    transform: translateX(-50%); /* Genau zentrieren */
+    background-color: white;
+    border-radius: 20%;
+}
+.restaurant_info{
+    position: absolute;
+    top: 300px;
+    left: 25px;
+    color: white;
+}
+.rating {
+    font-size: 18px;
+    color: gold;
+    display: flex;
+}
+.rating p{
+    color: white;
+}  
+.deliverCost{
+    display: flex;
+}
+.deliverCost img{
+    height: 20px;
+    filter: invert(1);
+}

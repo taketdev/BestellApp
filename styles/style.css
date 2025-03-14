@@ -201,6 +201,17 @@ header img{
     border-bottom-right-radius: 10px;
     padding: 1rem;
 }
+.food_card1{
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.food_card1:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
 /* Food card 2 */
 .food_card2 img{
@@ -222,6 +233,17 @@ header img{
     border-bottom-right-radius: 10px;
     padding: 1rem;
 }
+.food_card2{
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.food_card2:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
 /* Food card 3 */
 .food_card3 img{
@@ -241,6 +263,17 @@ header img{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 1rem;
+}
+.food_card3{
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.food_card3:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */

@@ -1,4 +1,7 @@
 /* Cart Container & Überschrift */
+.d_none{
+    display: none;
+}
 .cart{
     width: 350px;
     background-color: white;
@@ -191,7 +194,7 @@ input:checked + .slider:before{
     transition: background-color 0.3s;
 }
 /* Toggle Cart */
-.toggle-cart{
+.toggle_cart{
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -207,4 +210,17 @@ input:checked + .slider:before{
     display: flex;
     align-items: center;
     justify-content: center;
-} 
+}
+.toggle_cart:active {
+    transform: scale(0.9);
+    background-color: #ff9800;
+}
+.toggle_cart:active i {
+    transform: rotate(20deg);
+}
+.toggle_cart {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.toggle_cart i {
+    transition: transform 0.2s ease;
+}

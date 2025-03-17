@@ -57,6 +57,8 @@ header img{
     top: 300px;
     left: 25px;
     color: white;
+    max-width: 650px;
+    max-height: 130px;
 }
 .rating{
     font-size: 18px;
@@ -79,6 +81,7 @@ header img{
 .categories_nav{
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: white;
     height: 70px;
     gap: 300px;
@@ -118,11 +121,19 @@ header img{
 /* Content Cover & Content */
 .content {
     padding-bottom: 25px;
+
 }
 .content_cover{
-    position: relative;
-    width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 2vh;
+}
+.img_test{
+    background-image: url(/assets/img/food_img/Nudelgerichte/nudelgerichte.jpg);
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
 }
 .content_cover img{
     display: block;
@@ -132,15 +143,7 @@ header img{
     filter: brightness(0.8);
     border-radius: 32px;
 }
-.content_cover p{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-weight: bold;
-    font-size: 3rem;
-}
+
 .content span{
     text-align: center;
     display: flex;
@@ -153,7 +156,66 @@ header img{
     width: 600px;
     margin: 0 auto;
 }
-
+/* Nudelgerichte */
+.nudelgerichte_header{
+    background-image: url(/assets/img/food_img/Nudelgerichte/nudelgerichte.jpg);
+    height: 250px;
+    width: 1000px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: white;
+}
+/* Currygerichte */
+.currygerichte_header{
+    background-image: url(/assets/img/food_img/Curry/curry.jpg);
+    height: 250px;
+    width: 1000px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: white;
+}
+/* Spzeialitäten */
+.spezialgerichte_header{
+    background-image: url(/assets/img/food_img/Spezialitäten/spezial.jpg);
+    height: 250px;
+    width: 1000px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: white;
+}
+/* Getränke */
+.getraenke_header{
+    background-image: url(/assets/img/food_img/Getränke/getränke.jpg);
+    height: 250px;
+    width: 1000px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: white;
+}
 /* Cards */
 .cards{
     display: flex;
@@ -304,4 +366,67 @@ footer{
 }
 .footer_info p:hover{
     text-decoration: underline;
+}
+
+/* Media Querrys */
+/* 1490px */
+@media (max-width: 1490px){
+    .categories_nav{
+        gap: 200px;
+    }
+}
+@media (max-width: 1430px){
+    .restaurant_logo{
+        top: 134px;
+        left: 10%;
+        transform: translate(0);
+
+    }
+}
+@media (max-width: 1150px){
+    .categories_nav{
+        gap: 100px;
+    }
+}
+@media (max-width: 840px){
+    .categories_nav{
+        gap: 10px;
+    }
+}
+@media (max-width: 570px){
+    .categories_nav{
+        gap: 0;
+    }
+    .categories_nav a{
+        font-size: 16px;
+        padding: 20px 6px;
+    }
+}
+
+@media (max-width: 470px){
+    .restaurant_info h1{
+        font-size: 26px;
+    }
+    .restaurant_info p{
+        font-size: 14px;
+    }
+    .deliverCost{
+        font-size: 14px;
+    }
+    .rating{
+        font-size: 16px;
+    }
+    .footer_content{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 360px){
+    .categories_nav a{
+        font-size: 14px;
+        padding: 20px 3px;
+    }
+    .seperator{
+        width: 290px !important; 
+    }
 }

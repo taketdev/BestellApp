@@ -3,7 +3,6 @@
     display: none;
 }
 .cart{
-    width: 350px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
@@ -16,7 +15,8 @@
 .cart_container{
     width: 350px;
     position: fixed;
-    right: 200px;
+    top: 550px;
+    right: 100px;
     /* right: 10px;  -- Für 1920px*/
 }
 /* Oder Switch Bereich */
@@ -196,7 +196,7 @@ input:checked + .slider:before{
 /* Toggle Cart */
 .toggle_cart{
     position: fixed;
-    bottom: 20px;
+    bottom: 120px;
     right: 20px;
     width: 60px;
     height: 60px;

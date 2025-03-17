@@ -1,4 +1,4 @@
-const dishes = [
+let dishes = [
     // Nudelgerichte
     {
       id: 1,
@@ -75,10 +75,7 @@ const dishes = [
       description: "Knusprige Ente mit Pfannkuchen, Frühlingszwiebeln und Hoisin-Sauce",
       price: 18.90,
       image: "./assets/img/food_img/Spezialitäten/pekingente.jpg"
-    }
-  ];
-  
-  const drinks = [
+    },
     {
       id: 10,
       category: "getraenke",
@@ -101,6 +98,4 @@ const dishes = [
       image: "./assets/img/food_img/Getränke/cola.jpg"
     }
   ];
-  
-  export { dishes, drinks };
   

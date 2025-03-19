@@ -1,6 +1,16 @@
-function toggleCart(){
+function toggleCart() {
     const cart = document.getElementById("cart");
+    const overlay = document.getElementById("cartOverlay");
+
+    // Umschalten der Sichtbarkeit des Warenkorbs
     cart.classList.toggle("d_none");
+    
+    // Falls der Warenkorb sichtbar ist, Overlay anzeigen, sonst ausblenden
+    if (!cart.classList.contains("d_none")) {
+        overlay.classList.add("show");
+    } else {
+        overlay.classList.remove("show");
+    }
 }
 
 // Cart Array
@@ -14,6 +24,8 @@ function renderCart(){
     const deliveryStatus = document.getElementById("delivery_status")
     const deliverySwitch = document.getElementById("deliverySwitch");
     const orderButton = document.getElementById("orderButton");
+    // Mindesbestellwert prüfen und Button Anpassen
+    const orderWarning = document.getElementById("orderWarning");
 
 
     let deliveryCost = 0;
@@ -52,7 +64,7 @@ function renderCart(){
 
     // Falls der Warenkorb leer ist zeige die Nachricht an
     if (cartItems.length === 0) {
-        cartContainer.innerHTML = "<p>Dein Warenkorb ist leer!</p>";
+        cartContainer.innerHTML = '<p style="text-align: center; color: rgba(128, 128, 128, 0.500);">Dein Warenkorb ist leer!</p>';
         if (subtotalElement) {
             subtotalElement.textContent = "0,00 €";
         }
@@ -68,7 +80,7 @@ function renderCart(){
         const cartItem = document.createElement("div");
         cartItem.classList.add("cartItems");
         cartItem.innerHTML = `
-            <div class="cart_div div-underline">
+            <div class="cart_div div_underline">
               <div class="cart_item">
                 <div class="cart_item_name">
                   <p><b>${item.name}</b></p>
@@ -96,9 +108,15 @@ function renderCart(){
 // **MINDESTBESTELLWERT PRÜFEN UND BUTTON DEAKTIVIEREN**
 if (orderButton) {
     if (subtotal >= 15) {
-        orderButton.disabled = false; // ✅ Aktiv
+        orderButton.disabled = false; // ✅ Aktivieren
+        if (orderWarning) orderWarning.style.display = "none"; // 🔹 Warnung ausblenden
     } else {
-        orderButton.disabled = true; // ❌ Deaktiviert
+        orderButton.disabled = true; // ❌ Deaktivieren
+        if (orderWarning) orderWarning.style.display = "block"; // 🔹 Warnung anzeigen
+    }
+    if (subtotal < 15) {
+        orderButton.disabled = true;
+        showNotification("Mindestbestellwert: 15,00 €", "error"); // ❌ Rot anzeigen
     }
 }
 
@@ -117,11 +135,36 @@ function addToCart(dish){
 
     if (existingItem) {
         existingItem.quantity++;
-    }   else {
+    } else {
         cartItems.push({ ...dish, quantity: 1 });
     }
-    console.log("cartItems nach addToCart:", cartItems); // TEST
+
     renderCart();
+    showNotification("Gericht wurde zum Warenkorb hinzugefügt!", "success");
+}
+// ✅ Funktion, um die Benachrichtigung zu zeigen
+function showNotification(message, type = "success") {
+    const container = document.getElementById("notificationContainer");
+    if (!container) return;
+
+    // Neue Nachricht erstellen
+    const notification = document.createElement("div");
+    notification.classList.add("notification", "show");
+    if (type === "error") {
+        notification.classList.add("error"); // ❌ Rote Warnung für Mindestbestellwert
+    }
+    notification.textContent = message;
+
+    // Nachricht zum Container hinzufügen
+    container.appendChild(notification);
+
+    // Nach 2 Sekunden ausblenden
+    setTimeout(() => {
+        notification.classList.add("hide");
+        setTimeout(() => {
+            notification.remove(); // Nach der Animation löschen
+        }, 500);
+    }, 2000);
 }
 
 // Button function, add dish to cart
@@ -161,6 +204,27 @@ function removeFromCart(dishId) {
     renderCart();
 }
 
+// order button function
+function completeOrder(){
+    if (cartItems.length === 0) return;
+
+    cartItems = [];
+    renderCart();
+
+    // Bestellbestätigung
+    showNotification("🎉 Deine Bestellung wurde abgeschickt!", "success");
+
+    // Button für 3sek deaktievieren
+    const orderButton = document.getElementById("orderButton");
+        if (orderButton) {
+    orderButton.disabled = true;
+    setTimeout(() => {
+        if (cartItems.length >= 15) {
+            orderButton.disabled = false; // Nur aktivieren, wenn Warenwert über 15 €
+        }
+    }, 3000);
+}};
+
 renderCart();
 document.addEventListener("DOMContentLoaded", function() {
     const orderButton = document.getElementById("orderButton");
@@ -168,3 +232,4 @@ document.addEventListener("DOMContentLoaded", function() {
         orderButton.disabled = true; // ❌ Direkt deaktivieren!
     }
 });
+document.getElementById("orderButton").addEventListener("click", completeOrder);

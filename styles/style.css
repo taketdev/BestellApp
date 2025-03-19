@@ -160,12 +160,14 @@ header img{
 .nudelgerichte_header{
     background-image: url(/assets/img/food_img/Nudelgerichte/nudelgerichte.jpg);
     height: 250px;
+    max-width: 1000px;
     width: 1000px;
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;
     border-radius: 10px;
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
@@ -227,13 +229,11 @@ header img{
 }
 .price{
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    justify-content: space-between; 
     align-items: center;
-    padding: 1rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #E67E22;
+    padding-top: 10px;
+    margin-top: auto; 
+    font-size: 22px;
 }
 .price button{
     background-color: #E67E22;
@@ -245,7 +245,7 @@ header img{
 }
 
 /* Food card 1 */
-.food_card1 img{
+.food_card img{
     width: 320px;
     height: 200px;
     object-fit: cover;
@@ -253,87 +253,27 @@ header img{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.food_info1{
-    color: black;
-    background-color: rgb(255, 255, 255);
+.food_info{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    padding: 1rem;
+    background-color: white;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
-    height: 200px;
-    width: 320px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    padding: 1rem;
 }
-.food_card1{
+.food_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 300px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.food_card1:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Food card 2 */
-.food_card2 img{
-    width: 320px;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.food_info2{
-    color: black;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
-    height: 200px;
-    width: 320px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 1rem;
-}
-.food_card2{
-    width: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.food_card2:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Food card 3 */
-.food_card3 img{
-    width: 320px;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-.food_info3{
-    color: black;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
-    height: 200px;
-    width: 320px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 1rem;
-}
-.food_card3{
-    width: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.food_card3:hover{
+.food_card:hover{
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }

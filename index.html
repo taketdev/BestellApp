@@ -54,44 +54,52 @@
       <a href="#spezialitaeten">Spezialitäten</a>
       <a href="#getraenke">Getränke</a>
     </div>
+  
+    <!-- Toggle Cart -->
+    <button class="toggle_cart" id="cart_btn" onclick="toggleCart()" aria-label="Warenkorb anzeigen/verbergen">
+      <i class="fas fa-shopping-cart"></i>
+    </button>
 
-    <!-- Cart -->
-    <div class="cart_container d_none" id="cart">
-      <div class="cart">
-        <h2>Dein Warenkorb</h2>
-        <div class="oder_switch">
-          <span>Abholung</span>
-            <label class="switch">
-              <input type="checkbox" id="deliverySwitch" onchange="renderCart()"/>
-                <span class="slider round"></span>
-              </label>
-              <span id="delivery_status">Lieferung</span>
-        </div>
-        
-        <div class="cart_items" id="cartItems"></div>
-      
-        <div class="total_container">
-          <div class="subTotal">
-            <span>Zwischensumme:</span>
-            <span id="subtotal_value">0</span>
-          </div>
-          <div class="deliveryCost">
-            <span>Lieferkosten:</span>
-            <span id="delivery_cost">0,00 €</span>
-          </div>
-          <div class="seperator"></div>
-            <div class="total">
-              <span>Gesamtsumme:</span>
-              <span id="total_value">0,00 €</span>
+          <!-- Cart -->
+          <div id="cartOverlay" class="cartOverlay" onclick="toggleCart()"></div>
+          <div class="cart_container d_none" id="cart">
+            <div class="cart">
+              <h2>Dein Warenkorb</h2>
+              <div class="order_switch">
+                <span>Abholung</span>
+                  <label class="switch">
+                    <input type="checkbox" id="deliverySwitch" onchange="renderCart()"/>
+                      <span class="slider round"></span>
+                    </label>
+                    <span id="delivery_status">Lieferung</span>
+              </div>
+              
+              <div class="cart_items" id="cartItems"></div>
+            
+              <div class="total_container">
+                <div class="subTotal">
+                  <span>Zwischensumme:</span>
+                  <span id="subtotal_value">0</span>
+                </div>
+                <div class="deliveryCost">
+                  <span>Lieferkosten:</span>
+                  <span id="delivery_cost">0,00 €</span>
+                </div>
+                <div class="seperator"></div>
+                  <div class="total">
+                    <span>Gesamtsumme:</span>
+                    <span id="total_value">0,00 €</span>
+                  </div>
+                  <button class="orderBtn" id="orderButton">Jetzt bestellen!</button>
+              </div>
             </div>
-            <button class="orderBtn" id="orderButton">Jetzt bestellen!</button>
-        </div>
-      </div>
-    </div>
+          </div>
+    
 
     <!-- Nudelgerichte section -->
     <div class="content_cover" id="nudelgerichte">
       <div class="nudelgerichte_header">Nudelgerichte</div>
+
     </div>
     <div class="content">
       <span>Unsere hausgemachten Nudel-Spezialitäten aus verschiedenen asiatischen Ländern</span>
@@ -129,10 +137,10 @@
       <div class="cards" id="getraenke_dishes"></div>
     </div>
 
-    <!-- Toggle Cart -->
-    <button class="toggle_cart" id="cart_btn" onclick="toggleCart()" aria-label="Warenkorb anzeigen/verbergen">
-      <i class="fas fa-shopping-cart"></i>
-    </button>
+    
+
+    <!-- Warnings -->
+    <div id="notificationContainer" class="notification-container"></div>
 
     <!-- Footer -->
     <footer>

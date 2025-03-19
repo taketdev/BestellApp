@@ -13,18 +13,21 @@
     text-align: center;
 }
 .cart_container{
-    width: 350px;
+    width: 450px;
     position: fixed;
-    top: 550px;
-    right: 100px;
-    /* right: 10px;  -- Für 1920px*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex: 0 0 auto;
+    z-index: 9999;
 }
 /* Oder Switch Bereich */
-.oder_switch{
+.order_switch{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
+    padding: 5px 0;
 }
 /* Switch & Slider */
 .switch{
@@ -80,8 +83,7 @@ input:checked + .slider:before{
 .cart_items{
     display: flex;
     flex-direction: column;
-    max-width: 350px;
-    max-height: 300px;
+    max-height: 200px;
     overflow-y: auto;
 }
 /* Cart Div & Unterstreichung */
@@ -90,10 +92,10 @@ input:checked + .slider:before{
     flex-direction: row;
     justify-content: space-between;
 }
-.div-underline{
+.div_underline{
     border-bottom: 2px solid rgba(0, 0, 0, 0.24);
-    padding-bottom: 5px;
-    width: 300px;
+    padding: 5px;
+    width: 400px;
     margin: 0 auto;
 }
 /* Cart Item */
@@ -214,17 +216,91 @@ input:checked + .slider:before{
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 9999;
 }
-.toggle_cart:active {
+.toggle_cart:active{
     transform: scale(0.9);
     background-color: #ff9800;
 }
-.toggle_cart:active i {
+.toggle_cart:active i{
     transform: rotate(20deg);
 }
-.toggle_cart {
+.toggle_cart{
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
-.toggle_cart i {
+.toggle_cart i{
     transition: transform 0.2s ease;
+}
+/* Order Warnings */
+.notification-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+.notification{
+    background-color: green;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.notification.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.notification.hide{
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.notification.error{
+    background-color: red; /* ❌ Mindestbestellwert-Warnung ist rot */
+}
+.cartOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Hintergrund wird abgedunkelt */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 9998; /* Liegt hinter dem Warenkorb */
+}
+
+/* Wenn der Warenkorb offen ist, wird dem Overlay die Klasse "show" hinzugefügt */
+.cartOverlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 530px){
+    .cart_container{
+        width: 350px;
+    }
+    .div_underline{
+        width: 300px;
+    }
+    .seperator{
+        width: 300px;
+    }
+}
+@media (max-width: 400px){
+    .cart_container{
+        width: 300px;
+    }
+    .div_underline{
+        width: 250px;
+    }
+    .seperator{
+        width: 250px;
+    }
 }

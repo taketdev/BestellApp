@@ -16,9 +16,9 @@ function renderDishes(){
     if (container) {
         const dishHTML = `
             <div class="cards" data-id="${dish.id}">
-                <div class="food_card1">
+                <div class="food_card">
                     <img src="${dish.image}" alt="${dish.name}" />
-                    <div class="food_info1">
+                    <div class="food_info">
                         <h2>${dish.name}</h2>
                         <p>${dish.description}</p>
                         <div class="price">

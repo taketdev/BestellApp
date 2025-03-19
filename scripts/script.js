@@ -23,7 +23,7 @@ function renderDishes(){
                         <p>${dish.description}</p>
                         <div class="price">
                             <p>${formatPrice(dish.price)}</p>
-                            <button>+</button>
+                            <button onclick="addToCartFromButton(${dish.id})">+</button>
                         </div>
                     </div>
                 </div>

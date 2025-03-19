@@ -1,0 +1,315 @@
+<!-- Nudelgerichte section -->
+    <div class="content_cover" id="nudelgerichte">
+      <div class="nudelgerichte_header">Nudelgerichte</div>
+    </div>
+
+    <div class="content" id="dishesTemplate"></div>
+
+    <div class="content">
+      <span>
+        Unsere hausgemachten Nudel-Spezialitäten aus verschiedenen asiatischen
+        Ländern
+      </span>
+      <div class="seperator"></div>
+      <div class="cards">
+        <!-- Food Card 1 -->
+        <div class="food_card1">
+          <img src="./assets/img/food_img/Nudelgerichte/padthai.jpg" alt="" />
+          <div class="food_info1">
+            <h2>Pad Thai</h2>
+            <p>
+              Gebratene Reisnudeln mit Tofu, Ei, Sojasprossen, Erdnüssen und
+              Limette
+            </p>
+            <div class="price">
+              <p>11,90 €</p>
+              <button>+</button>
+            </div>
+          </div>
+        </div>
+        <!-- Food card 2 -->
+        <div class="food_card2">
+          <img src="./assets/img/food_img/Nudelgerichte/Yakisoba.jpg" alt="" />
+          <div class="food_info2">
+            <h2>Yakisoba</h2>
+            <p>
+              Japanische gebratene Nudeln mit knackigem Gemüse und Hühnchen
+            </p>
+            <div class="price">
+              <p>12.90 €</p>
+              <button>+</button>
+            </div>
+          </div>
+        </div>
+        <!-- Food card 3 -->
+        <div class="food_card3">
+          <img src="./assets/img/food_img/Nudelgerichte/rmane.jpg" alt="" />
+          <div class="food_info3">
+            <h2>Ramen</h2>
+            <p>
+              Japanische Nudelsuppe mit reichhaltiger Brühe, Chashu und
+              Frühlingszwiebeln
+            </p>
+            <div class="price">
+              <p>13,50 €</p>
+              <button>+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Curry section -->
+    <div class="content_cover" id="curry">
+      <div class="currygerichte_header">Curry</div>
+    </div>
+
+    <div class="content">
+      <span>
+        Aromatische Currys mit verschiedenen Schärfegraden und frischen
+        Zutaten
+      </span>
+      <div class="seperator"></div>
+      <div class="cards">
+        <!-- Food Card 1 -->
+        <div class="food_card1">
+          <img src="./assets/img/food_img/Curry/grünescurry.jpg" alt="" />
+          <div class="food_info1">
+            <h2>Grünes Thai Curry</h2>
+            <p>
+              Scharfes grünes Curry mit Kokosmilch, Gemüse und Jasminreis
+            </p>
+            <div class="price">
+              <p>14,90 €</p>
+              <button>+</button>
+            </div>
+          </div>
+        </div>
+        <!-- Food card 2 -->
+        <div class="food_card2">
+          <img src="./assets/img/food_img/Curry/rotesthaicurry.jpg" alt="" />
+          <div class="food_info2">
+            <h2>Rotes Curry mit Ente</h2>
+            <p>
+              Aromatisches rotes Curry mit zarter Ente, Litschi und Gemüse
+            </p>
+            <div class="price">
+              <p>16,90 €</p>
+              <button>+</button>
+            </div>
+          </div>
+        </div>
+        <!-- Food card 3 -->
+        <div class="food_card3">
+          <img src="./assets/img/food_img/Curry/massaman.jpg" alt="" />
+          <div class="food_info3">
+            <h2>Massaman Curry</h2>
+            <p>
+              Mildes cremiges Curry mit Kartoffeln, Erdnüssen und Rindfleisch
+            </p>
+            <div class="price">
+              <p>15.50 €</p>
+              <button>+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spezialitäten section -->
+    <div class="content_cover" id="spezialitaeten">
+      <div class="spezialgerichte_header">Spezialitäten</div>
+    </div>
+
+    <div class="content">
+      <span>
+        Besondere Gerichte, die unsere Köche mit viel Liebe zubereiten
+      </span>
+      <div class="seperator"></div>
+      <div class="cards">
+        <!-- Food Card 1 -->
+        <div class="food_card1">
+          <img src="./assets/img/food_img/Spezialitäten/dumblings.jpg" alt="" />
+          <div class="food_info1">
+            <h2>Dumplings</h2>
+            <p>
+              Gedämpfte Teigtaschen gefüllt mit Schweinefleisch und Gemüse
+            </p>
+            <div class="price">
+              <p>9,90 €</p>
+              <button>+</button>
+            </div>
+          </div>
+        </div>
+        <!-- Food card 2 -->
+        <div class="food_card2">
+          <img src="./assets/img/food_img/Spezialitäten/bibimbap.jpg" alt="" />
+          <div class="food_info2">
+            <h2>Bibimbap</h2>
+            <p>
+              Koreanische Reisschüssel mit Gemüse, Ei und Rindfleisch
+            </p>
+            <div class="price">
+              <p>14,50 €</p>
+              <button>+</button>
+            </div>
+          </div>
+        </div>
+        <!-- Food card 3 -->
+        <div class="food_card3">
+          <img src="./assets/img/food_img/Spezialitäten/pekingente.jpg" alt="" />
+          <div class="food_info3">
+            <h2>Peking Ente</h2>
+            <p>
+              Knusprige Ente mit Pfannkuchen, Frühlingszwiebeln und
+              Hoisin-Sauce
+            </p>
+            <div class="price">
+              <p>18,90 €</p>
+              <button>+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Getränke section -->
+    <div class="content_cover" id="getraenke">
+      <div class="getraenke_header">Getränke</div>
+    </div>
+
+    <div class="content">
+      <span>
+        Besondere Getränke, die unsere Servicemitarbeiter mit viel Liebe
+        zubereiten
+      </span>
+      <div class="seperator"></div>
+      <div class="cards">
+        <!-- Food Card 1 -->
+        <div class="food_card1">
+          <img src="./assets/img/food_img/Getränke/fanta.jpg" alt="" />
+          <div class="food_info1">
+            <h2>Fanta</h2>
+            <div class="price">
+              <p>2,50 €</p>
+              <button>+</button>
+            </div>
+          </div>
+        </div>
+        <!-- Food card 2 -->
+        <div class="food_card2">
+          <img src="./assets/img/food_img/Getränke/sprite.jpg" alt="" />
+          <div class="food_info2">
+            <h2>Sprite</h2>
+            <div class="price">
+              <p>2,50 €</p>
+              <button>+</button>
+            </div>
+          </div>
+        </div>
+        <!-- Food card 3 -->
+        <div class="food_card3">
+          <img src="./assets/img/food_img/Getränke/cola.jpg" alt="" />
+          <div class="food_info3">
+            <h2>Coca Cola</h2>
+            <div class="price">
+              <p>2,50 €</p>
+              <button>+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    function renderDishes(){
+        const container = document.getElementById('dishesTemplate');
+        container.innerHTML ='';
+    
+        dishes.forEach((dish) => {
+            const dishHTML = `
+                <div class="cards" data-id="${dish.id}">
+                    <div class="food_card1">
+                        <img src="${dish.image}" alt="${dish.name}" />
+                        <div class="food_info1">
+                            <h2>${dish.name}</h2>
+                            <p>${dish.description}</p>
+                            <div class="price">
+                                <p>${formatPrice(dish.price)}</p>
+                                <button>+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.innerHTML += dishHTML;
+          });
+        }
+            function formatPrice(price) {
+            // Formatiert den Preis mit zwei Nachkommastellen und ersetzt den Punkt durch ein Komma
+            return price.toFixed(2).replace('.', ',') + ' €';
+          }
+          
+    
+        renderDishes();
+
+
+
+         <!-- Cart -->
+    <div class="cart_container d_none" id="cart">
+        <div class="cart">
+          <h2>Dein Warenkorb</h2>
+          <div class="oder_switch">
+            <span>Abholung</span>
+              <label class="switch">
+                <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+                <span>Lieferung</span>
+          </div>
+                
+          <div class="cart_items ">
+            <!--<p>Dein Warenkorb ist leer!</p>-->
+            <div class="cart_div div-underline">
+              <div class="cart_item">
+                <div class="cart_item_name">
+                  <p><b>Ramen</b></p>
+                </div>
+                <div class="cart_item_price">
+                  <p>13,50 €</p>
+                </div>
+              </div>
+                
+              <div class="cart_actions">
+                <div class="number_control">
+                  <button class="quantity-btn">−</button>
+                  <span class="quantity-number">1</span>
+                  <button class="quantity-btn">+</button>
+                </div>
+                <div class="remove-item" onclick="removeFromCart(123)">
+                  <i class="fas fa-trash"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+                
+          <div class="total_container">
+            <div class="subTotal">
+              <span>Zwischensumme:</span>
+              <span id="subtotal_value">0,00 €</span>
+            </div>
+            <div class="deliveryCost">
+              <span>Lieferkosten:</span>
+              <span>0,00 €</span>
+            </div>
+            <div class="seperator"></div>
+              <div class="total">
+                <span>Gesamtsumme:</span>
+                <span>0,00 €</span>
+              </div>
+              <button class="orderBtn">Jetzt bestellen!</button>
+          </div>
+        </div>
+      </div>

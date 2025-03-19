@@ -193,6 +193,10 @@ input:checked + .slider:before{
     cursor: pointer;
     transition: background-color 0.3s;
 }
+.orderBtn:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
 /* Toggle Cart */
 .toggle_cart{
     position: fixed;

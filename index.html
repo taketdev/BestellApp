@@ -62,10 +62,10 @@
         <div class="oder_switch">
           <span>Abholung</span>
             <label class="switch">
-              <input type="checkbox" />
+              <input type="checkbox" id="deliverySwitch" onchange="renderCart()"/>
                 <span class="slider round"></span>
               </label>
-              <span>Lieferung</span>
+              <span id="delivery_status">Lieferung</span>
         </div>
         
         <div class="cart_items" id="cartItems"></div>
@@ -77,14 +77,14 @@
           </div>
           <div class="deliveryCost">
             <span>Lieferkosten:</span>
-            <span>0,00 €</span>
+            <span id="delivery_cost">0,00 €</span>
           </div>
           <div class="seperator"></div>
             <div class="total">
               <span>Gesamtsumme:</span>
-              <span>0,00 €</span>
+              <span id="total_value">0,00 €</span>
             </div>
-            <button class="orderBtn">Jetzt bestellen!</button>
+            <button class="orderBtn" id="orderButton">Jetzt bestellen!</button>
         </div>
       </div>
     </div>

@@ -6,14 +6,43 @@ function toggleCart(){
 // Cart Array
 let cartItems = [];
 
-if (typeof dishes === "undefined") {
-    console.error("❌ Fehler: dishes.js wurde nicht geladen!");
-}
-
 function renderCart(){
     const cartContainer = document.getElementById("cartItems");
-    console.log("renderCart wurde aufgerufen!"); // TEST
     const subtotalElement = document.getElementById("subtotal_value");
+    // Lieferkosten überprüfen
+    const deliveryCostElement = document.getElementById("delivery_cost");
+    const deliveryStatus = document.getElementById("delivery_status")
+    const deliverySwitch = document.getElementById("deliverySwitch");
+    const orderButton = document.getElementById("orderButton");
+
+
+    let deliveryCost = 0;
+
+    if (deliverySwitch && deliverySwitch.checked) {
+        deliveryCost = 5.00;
+        if (deliveryStatus) deliveryStatus.textContent = "Lieferung";
+    } else {
+        if (deliveryStatus) deliveryStatus.textContent = "Abholung";
+    }
+
+    let subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+    // Zwischensumme im DOM aktualiesieren.
+    if (subtotalElement) {
+        subtotalElement.textContent = formatPrice(subtotal);
+    }
+
+    // Gesamtsumme berechnen
+    let total = subtotal + deliveryCost;
+
+    // Werte im HTML anzeigen
+    const totalElement = document.getElementById("total_value");
+    if (deliveryCostElement) {
+        deliveryCostElement.textContent = formatPrice(deliveryCost);
+    }
+    if (totalElement) {
+        totalElement.textContent = formatPrice(total);
+    }
 
     // Falls es noch kein Cart-Element gibt, breche ab
     if (!cartContainer) return;
@@ -27,14 +56,15 @@ function renderCart(){
         if (subtotalElement) {
             subtotalElement.textContent = "0,00 €";
         }
-        return;
+        if (orderButton) {
+            orderButton.disabled = true; // ❌ Button deaktivieren, wenn der Warenkorb leer ist!
+        }
+        return; // Funktion verlassen
     }
 
-    let subtotal = 0;
-    cartItems.forEach((item) => {
-        subtotal +=  item.price * item.quantity; // Pris * menge
 
         // Create for every Dish in cart a element
+        cartItems.forEach((item) => {
         const cartItem = document.createElement("div");
         cartItem.classList.add("cartItems");
         cartItem.innerHTML = `
@@ -63,12 +93,22 @@ function renderCart(){
         cartContainer.appendChild(cartItem);
     });
 
+// **MINDESTBESTELLWERT PRÜFEN UND BUTTON DEAKTIVIEREN**
+if (orderButton) {
+    if (subtotal >= 15) {
+        orderButton.disabled = false; // ✅ Aktiv
+    } else {
+        orderButton.disabled = true; // ❌ Deaktiviert
+    }
+}
+
 subtotalElement.textContent = formatPrice(subtotal);
 } 
 
 function formatPrice(price){
     return price.toFixed(2).replace('.', ',') + ' €';
 }
+
 
 
 // add to cart
@@ -122,3 +162,9 @@ function removeFromCart(dishId) {
 }
 
 renderCart();
+document.addEventListener("DOMContentLoaded", function() {
+    const orderButton = document.getElementById("orderButton");
+    if (orderButton) {
+        orderButton.disabled = true; // ❌ Direkt deaktivieren!
+    }
+});

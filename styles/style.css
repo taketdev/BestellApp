@@ -367,6 +367,6 @@ footer{
         padding: 20px 3px;
     }
     .seperator{
-        width: 290px !important; 
+        width: 290px; 
     }
 }

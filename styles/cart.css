@@ -96,7 +96,6 @@ input:checked + .slider:before{
 .div_underline{
     border-bottom: 2px solid rgba(0, 0, 0, 0.24);
     padding: 5px;
-    width: 400px;
     margin: 0 auto;
 }
 /* Cart Item */

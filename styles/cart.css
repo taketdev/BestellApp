@@ -14,12 +14,13 @@
 }
 .cart_container{
     width: 450px;
-    position: fixed;
-    top: 50%;
+    position: absolute;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(114%, -81%);
     flex: 0 0 auto;
     z-index: 9999;
+    max-height: 80vh; /* Maximale Höhe von 80% der Viewport-Höhe */
+    overflow-y: auto;
 }
 /* Oder Switch Bereich */
 .order_switch{
@@ -281,6 +282,34 @@ input:checked + .slider:before{
     opacity: 1;
     visibility: visible;
 }
+
+@media (max-width: 1950px){
+    .cart_container{
+        width: 400px;
+        transform: translate(130%, -81%);
+    }
+}
+@media (max-width: 1880px){
+    .cart_container{
+        width: 375px;
+        transform: translate(135%, -81%);
+    }
+}
+@media (max-width: 1780px){
+    .cart_container{
+        width: 350px;
+        transform: translate(145%, -81%);
+    }
+}
+@media (max-width: 1740px){
+    .cart_container{
+        top: 50%;
+        left: 50%;
+        width: 375px;
+        transform: translate(-50%, -50%);
+    }
+}
+
 
 @media (max-width: 530px){
     .cart_container{

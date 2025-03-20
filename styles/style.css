@@ -28,7 +28,7 @@ header img{
 
 /* Hero */
 .hero_img{
-    background-image: url(/assets/img/food_img/hero.jpg);
+    background-image: url(../assets/img/food_img/hero.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -129,7 +129,7 @@ header img{
     padding: 0 2vh;
 }
 .img_test{
-    background-image: url(/assets/img/food_img/Nudelgerichte/nudelgerichte.jpg);
+    background-image: url(../assets/img/food_img/Nudelgerichte/nudelgerichte.jpg);
     height: 250px;
     background-size: cover;
     background-position: center;
@@ -158,7 +158,7 @@ header img{
 }
 /* Nudelgerichte */
 .nudelgerichte_header{
-    background-image: url(/assets/img/food_img/Nudelgerichte/nudelgerichte.jpg);
+    background-image: url(../assets/img/food_img/Nudelgerichte/nudelgerichte.jpg);
     height: 250px;
     max-width: 1000px;
     width: 1000px;
@@ -175,7 +175,7 @@ header img{
 }
 /* Currygerichte */
 .currygerichte_header{
-    background-image: url(/assets/img/food_img/Curry/curry.jpg);
+    background-image: url(../assets/img/food_img/Curry/curry.jpg);
     height: 250px;
     width: 1000px;
     background-size: cover;
@@ -190,7 +190,7 @@ header img{
 }
 /* Spzeialitäten */
 .spezialgerichte_header{
-    background-image: url(/assets/img/food_img/Spezialitäten/spezial.jpg);
+    background-image: url(../assets/img/food_img/Spezialitäten/spezial.jpg);
     height: 250px;
     width: 1000px;
     background-size: cover;
@@ -205,7 +205,7 @@ header img{
 }
 /* Getränke */
 .getraenke_header{
-    background-image: url(/assets/img/food_img/Getränke/getränke.jpg);
+    background-image: url(../assets/img/food_img/Getränke/getränke.jpg);
     height: 250px;
     width: 1000px;
     background-size: cover;
@@ -244,7 +244,7 @@ header img{
     cursor: pointer;
 }
 
-/* Food card 1 */
+/* Food card */
 .food_card img{
     width: 320px;
     height: 200px;

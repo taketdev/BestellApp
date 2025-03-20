@@ -1,5 +1,5 @@
-function renderDishes(){
-// Für jedes Gericht den entsprechenden Container auswählen
+function renderDishes() {
+    // Check category
     dishes.forEach((dish) => {
         let container;
         if (dish.category === "nudelgerichte") {
@@ -12,31 +12,39 @@ function renderDishes(){
             container = document.getElementById("getraenke_dishes");
         }
 
-// Falls der entsprechende Container existiert, füge das HTML hinzu
-    if (container) {
-        const dishHTML = `
-            <div class="cards" data-id="${dish.id}">
-                <div class="food_card">
-                    <img src="${dish.image}" alt="${dish.name}" />
-                    <div class="food_info">
-                        <h2>${dish.name}</h2>
-                        <p>${dish.description}</p>
-                        <div class="price">
-                            <p>${formatPrice(dish.price)}</p>
-                            <button onclick="addToCartFromButton(${dish.id})">+</button>
+        // container exists, add dish
+        if (container) {
+            const dishHTML = `
+                <div class="cards" data-id="${dish.id}">
+                    <div class="food_card">
+                        <img src="${dish.image}" alt="${dish.name}" />
+                        <div class="food_info">
+                            <h2>${dish.name}</h2>
+                            <p>${dish.description}</p>
+                            <div class="price">
+                                <p>${formatPrice(dish.price)}</p>
+                                <button onclick="addToCartFromButton(${dish.id})">+</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             `;
             container.innerHTML += dishHTML;
         }
     });
 }
 
-// Preis richtig anzeigen lassen
+// Display price correctly
 function formatPrice(price) {
     return price.toFixed(2).replace('.', ',') + ' €';
 }
 
 renderDishes();
+
+// cart scroll function
+window.onscroll = function() {
+    let cart = document.getElementById("cart");
+    let scrollY = window.scrollY;
+
+    cart.style.top = `${scrollY + 800}px`; // Dynamische Anpassung
+};

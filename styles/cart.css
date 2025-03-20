@@ -20,7 +20,6 @@
     flex: 0 0 auto;
     z-index: 9999;
     max-height: 80vh; /* Maximale Höhe von 80% der Viewport-Höhe */
-    overflow-y: auto;
 }
 /* Oder Switch Bereich */
 .order_switch{

@@ -1,5 +1,4 @@
 function renderDishes() {
-    // Check category
     dishes.forEach((dish) => {
         let container;
         if (dish.category === "nudelgerichte") {
@@ -12,7 +11,6 @@ function renderDishes() {
             container = document.getElementById("getraenke_dishes");
         }
 
-        // container exists, add dish
         if (container) {
             const dishHTML = `
                 <div class="cards" data-id="${dish.id}">
@@ -34,17 +32,15 @@ function renderDishes() {
     });
 }
 
-// Display price correctly
 function formatPrice(price) {
     return price.toFixed(2).replace('.', ',') + ' €';
 }
 
 renderDishes();
 
-// cart scroll function
 window.onscroll = function() {
     let cart = document.getElementById("cart");
     let scrollY = window.scrollY;
 
-    cart.style.top = `${scrollY + 800}px`; // Dynamische Anpassung
+    cart.style.top = `${scrollY + 800}px`;
 };

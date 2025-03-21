@@ -6,25 +6,22 @@
     <title>BestellApp</title>
     <link rel="icon" href="./assets/Favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles/satoshi.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/cart.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <body>
-    <!-- Header -->
     <header>
       <div>
         <img src="./assets/Logo/Bestell App- Logo.svg" alt="" />
       </div>
     </header>
 
-    <!-- Hero -->
     <div class="hero_img"></div>
     <div class="restaurant_logo">
       <img src="./assets/img/bibimbap.png" alt="" />
     </div>
 
-    <!-- Restaurant Info -->
     <div class="restaurant_info">
       <h1>Paradise Noodles</h1>
       <div class="rating">
@@ -32,7 +29,7 @@
         <i class="fa-solid fa-star"></i>
         <i class="fa-solid fa-star"></i>
         <i class="fa-solid fa-star"></i>
-        <i class="fa-regular fa-star"></i> <!-- Leerer Stern -->
+        <i class="fa-regular fa-star"></i> 
         <p> 4.0 (128 Bewerungen)</p>
       </div>
       <p>
@@ -47,25 +44,21 @@
       </div>
     </div>
 
-    <!-- categories-list -->
     <div class="categories_nav">
       <a href="#nudelgerichte">Nudelgerichte</a>
       <a href="#curry">Curry</a>
       <a href="#spezialitaeten">Spezialitäten</a>
       <a href="#getraenke">Getränke</a>
     </div>
-  
-    <!-- Toggle Cart -->
+
     <button class="toggle_cart" id="cart_btn" onclick="toggleCart()" aria-label="Warenkorb anzeigen/verbergen">
       <i class="fas fa-shopping-cart"></i>
     </button>
 
-    <!-- Nudelgerichte section -->
     <div class="content_cover" id="nudelgerichte">
       <div class="nudelgerichte_header">Nudelgerichte</div>
     </div>
 
-    <!-- Cart -->
     <div id="cartOverlay" class="cartOverlay" onclick="toggleCart()"></div>
     <div class="cart_container d_none" id="cart">
       <div class="cart">
@@ -106,7 +99,6 @@
       <div class="cards" id="nudelgerichte_dishes"></div>
     </div>
 
-    <!-- Curry section -->
     <div class="content_cover" id="curry">
       <div class="currygerichte_header">Curry</div>
     </div>
@@ -116,7 +108,6 @@
       <div class="cards" id="curry_dishes"></div>
     </div>
 
-    <!-- Spezialitäten section -->
     <div class="content_cover" id="spezialitaeten">
       <div class="spezialgerichte_header">Spezialitäten</div>
     </div>
@@ -126,7 +117,6 @@
       <div class="cards" id="spezialitaeten_dishes"></div>
     </div>
 
-    <!-- Getränke section -->
     <div class="content_cover" id="getraenke">
       <div class="getraenke_header">Getränke</div>
     </div>
@@ -136,12 +126,8 @@
       <div class="cards" id="getraenke_dishes"></div>
     </div>
 
-    
-
-    <!-- Warnings -->
     <div id="notificationContainer" class="notification-container"></div>
 
-    <!-- Footer -->
     <footer>
       <div class="footer_content">
         <div class="footer_logo">
@@ -155,9 +141,9 @@
       </div>
     </footer>
 
-    <script src="./scripts/dishes.js"></script>
-    <script src="./scripts/script.js"></script>
     <script src="./scripts/cart.js"></script>
+    <script src="./scripts/dishes.js"></script>
+    <script src="./script.js"></script>
     
   </body>
 </html>

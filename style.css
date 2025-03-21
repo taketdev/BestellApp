@@ -1,4 +1,3 @@
-/* Global */
 *{
     margin: 0;
     scroll-behavior: smooth;
@@ -10,7 +9,6 @@ body{
     font-family: 'Satoshi-Regular';
 }
 
-/* Header */
 header{
     background-color: #E67E22;
     color: white;
@@ -26,9 +24,8 @@ header img{
     padding: 25px;
 }
 
-/* Hero */
 .hero_img{
-    background-image: url(../assets/img/food_img/hero.jpg);
+    background-image: url(./assets/img/food_img/hero.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -51,7 +48,6 @@ header img{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Restaurant Info */
 .restaurant_info{
     position: absolute;
     top: 300px;
@@ -77,7 +73,6 @@ header img{
     filter: invert(1);
 }
 
-/* Categories Nav */
 .categories_nav{
     display: flex;
     justify-content: center;
@@ -118,7 +113,6 @@ header img{
     width: 100%;
 }
 
-/* Content Cover & Content */
 .content {
     padding-bottom: 25px;
 
@@ -129,7 +123,7 @@ header img{
     padding: 0 2vh;
 }
 .img_test{
-    background-image: url(../assets/img/food_img/Nudelgerichte/nudelgerichte.jpg);
+    background-image: url(./assets/img/food_img/Nudelgerichte/nudelgerichte.jpg);
     height: 250px;
     background-size: cover;
     background-position: center;
@@ -156,9 +150,9 @@ header img{
     width: 600px;
     margin: 0 auto;
 }
-/* Nudelgerichte */
+
 .nudelgerichte_header{
-    background-image: url(../assets/img/food_img/Nudelgerichte/nudelgerichte.jpg);
+    background-image: url(./assets/img/food_img/Nudelgerichte/nudelgerichte.jpg);
     height: 250px;
     max-width: 1000px;
     width: 1000px;
@@ -173,9 +167,9 @@ header img{
     font-size: 3rem;
     color: white;
 }
-/* Currygerichte */
+
 .currygerichte_header{
-    background-image: url(../assets/img/food_img/Curry/curry.jpg);
+    background-image: url(./assets/img/food_img/Curry/curry.jpg);
     height: 250px;
     width: 1000px;
     background-size: cover;
@@ -188,9 +182,9 @@ header img{
     font-size: 3rem;
     color: white;
 }
-/* Spzeialitäten */
+
 .spezialgerichte_header{
-    background-image: url(../assets/img/food_img/Spezialitäten/spezial.jpg);
+    background-image: url(./assets/img/food_img/Spezialitäten/spezial.jpg);
     height: 250px;
     width: 1000px;
     background-size: cover;
@@ -203,9 +197,9 @@ header img{
     font-size: 3rem;
     color: white;
 }
-/* Getränke */
+
 .getraenke_header{
-    background-image: url(../assets/img/food_img/Getränke/getränke.jpg);
+    background-image: url(./assets/img/food_img/Getränke/getränke.jpg);
     height: 250px;
     width: 1000px;
     background-size: cover;
@@ -218,7 +212,7 @@ header img{
     font-size: 3rem;
     color: white;
 }
-/* Cards */
+
 .cards{
     display: flex;
     justify-content: center;
@@ -244,7 +238,6 @@ header img{
     cursor: pointer;
 }
 
-/* Food card */
 .food_card img{
     width: 320px;
     height: 200px;
@@ -278,7 +271,6 @@ header img{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
 footer{
     background-color: #333;
     color: white;
@@ -309,7 +301,6 @@ footer{
 }
 
 /* Media Querrys */
-/* 1490px */
 @media (max-width: 1490px){
     .categories_nav{
         gap: 200px;
@@ -342,7 +333,6 @@ footer{
         padding: 20px 6px;
     }
 }
-
 @media (max-width: 470px){
     .restaurant_info h1{
         font-size: 26px;
@@ -360,7 +350,6 @@ footer{
         flex-direction: column;
     }
 }
-
 @media (max-width: 360px){
     .categories_nav a{
         font-size: 14px;

@@ -273,7 +273,6 @@ input:checked + .slider:before{
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     z-index: 9998; 
 }
-
 .cartOverlay.show {
     opacity: 1;
     visibility: visible;
@@ -299,10 +298,9 @@ input:checked + .slider:before{
 }
 @media (max-width: 1740px){
     .cart_container{
-        top: 50%;
         left: 50%;
         width: 375px;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -160%);
     }
 }
 @media (max-width: 530px){

@@ -38,7 +38,7 @@ function formatPrice(price) {
 
 renderDishes();
 
-window.onscroll = function() {
+window.onscroll = function () {
     let cart = document.getElementById("cart");
     let scrollY = window.scrollY;
 

@@ -10,24 +10,8 @@ function renderDishes() {
         } else if (dish.category === "getraenke") {
             container = document.getElementById("getraenke_dishes");
         }
-
         if (container) {
-            const dishHTML = `
-                <div class="cards" data-id="${dish.id}">
-                    <div class="food_card">
-                        <img src="${dish.image}" alt="${dish.name}" />
-                        <div class="food_info">
-                            <h2>${dish.name}</h2>
-                            <p>${dish.description}</p>
-                            <div class="price">
-                                <p>${formatPrice(dish.price)}</p>
-                                <button onclick="addToCartFromButton(${dish.id})">+</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-            container.innerHTML += dishHTML;
+            container.innerHTML += getDishHTML(dish);
         }
     });
 }

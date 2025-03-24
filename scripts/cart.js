@@ -35,32 +35,7 @@ function updateOrderButton(subtotal) {
 }
 
 function createCartItemElement(item) {
-    const cartItem = document.createElement("div");
-    cartItem.classList.add("cartItems");
-    cartItem.innerHTML = `
-        <div class="cart_div div_underline">
-            <div class="cart_item">
-            <div class="cart_item_name">
-                <p><b>${item.name}</b></p>
-            </div>
-            <div class="cart_item_price">
-                <p>${formatPrice(item.price)}</p>
-            </div>
-            </div>
-            <div class="cart_actions">
-            <div class="number_control">
-                <button class="quantity-btn" onclick="decreaseQuantity(${item.id})">−</button>
-                <span class="quantity-number">${item.quantity}</span>
-                <button class="quantity-btn" onclick="increaseQuantity(${item.id})">+</button>
-            </div>
-            <div class="remove-item">
-                 <i class="fas fa-trash" onclick="removeFromCart(${item.id})"></i>
-            </div>
-            </div>
-        </div>
-        `;
-
-    return cartItem;
+    return getCartItemHTML(item);
 }
 
 function updateCartDisplay() {
